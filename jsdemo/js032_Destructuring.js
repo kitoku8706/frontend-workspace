@@ -86,7 +86,23 @@ console.log(completedHabit2);
 
 
 
+/////////////////////////////////////////////////////////////
+//member변수에서 데이터를 추출하여 '고수 고객님은 서울에 거주합니다.' 라고 출력하세요.
 
+
+let member = {
+    hname: "고수",
+    address: {
+        zipCode: "526-143",
+        city: "서울",
+    },
+};
+
+// let { hname, address } = member;
+// console.log(`${hname} 고객님은 ${address.city}에 거주합니다.`)
+
+let { hname, address: { city } } = member;
+console.log(`${hname} 고객님은 ${city}에 거주합니다.`)
 
 
 
