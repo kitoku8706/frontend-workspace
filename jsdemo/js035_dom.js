@@ -1,32 +1,85 @@
-let hNode = document.getElementById("selector");
-console.log(hNode);
-console.log(typeof hNode);
+//document라는 객체가 있음
 
-let hClass = document.getElementsByClassName("choice")
-console.log(hClass);
-console.log(typeof hClass);
+//id: id라는 요소에서 h1이라는 객체를 받아올거야
+let hNode = document.getElementById("selector"); //HTML Element
+console.log(hNode);//<h1 id="selector" class="choice">선택자</h1>
+console.log(typeof hNode); //객체: object
 
-let pNode = document.getElementsByTagName("p");
-console.log(pNode);
-console.log(pNode.length);
+//class
+let hClass = document.getElementsByClassName("choice"); //HTML Collection
+console.log(hClass); //HTMLCollection [h1#selector.choice, selector: h1#selector.choice]
+console.log(typeof hClass); //object
+console.log(hClass.length); //1
 
-console.log(pNode[0]);
-console.log(pNode.item(0));
-console.log(pNode[0].innerText);
-console.log(pNode[1].innerText);
-console.log(pNode[0].textContent);
-console.log(pNode[1].textContent);
+//태그명
+let pNode = document.getElementsByTagName('p');
+console.log(pNode); //HTMLCollection(4)[p, p, p, p]
+console.log(pNode.length); //4
+
+console.log(pNode[0]); //<p>content1</p>
+console.log(pNode.item(0));  //<p>content1</p> -> HTMLCollection에 item()제공해줌
+
+// innerText: index 에 해당되는 곳(P)의 이름 호출
+console.log(pNode[0].innerText); //content1
+console.log(pNode[1].innerText); //content2
+
+//textContent: 
+console.log(pNode[0].textContent); //content1
+console.log(pNode[1].textContent); //content2
+
+//CSS 처럼 JS에서 background 적용 -> 요소객체.style.backgroundColor ="색이름";
 pNode[0].style.backgroundColor = "blue";
 
-/////////////////////////////////////////////
-let hId = document.querySelector("#selector");
-console.log(hId);
+console.log(pNode[0]);    //p
+console.log(pNode.item(0)); //p
+console.log(pNode[0].innerText);  //content1
+console.log(pNode[1].innerText);  //content2
+console.log(pNode[0].textContent) //content1
+console.log(pNode[1].textContent) //content2
+pNode[0].style.backgroundColor = "blue";
 
-let hData = document.querySelector(".choice");
-console.log(hData);
 
-let pList = document.querySelector("p");
-console.log(pList);
+console.log('=========================')
+//부모위치에서 자손요소의 컨텐츠를 가져올때 차이보기 (innerText,textContent)
+let divNode = document.getElementsByTagName('div')[0];
+console.log(divNode);
+console.log(divNode.innerText); // content1  content3
+console.log(divNode.textContent); // content1 content2 content3 content4
+console.log(divNode.innerHTML); //
+//  <p style="background-color: blue;">content1</p>
+//   <p style="display: none">content2</p>
+//   <p>content3</p>
+//   <p style="display: none">content4</p>
+console.log('=========================')
+//////////////////////////////////////
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+// 위의 내용을 한꺼번에 적용하기: document.querySelector 이용
+//
+let hId = document.querySelector("#selector"); //css에서 id는 # ; Element
+console.log(hId); //<h1 id="selector" class="choice">선택자</h1>
+
+let hData = document.querySelector(".choice"); //css에서 class 호출할 때는 . ;Element
+console.log(hData); //<h1 id="selector" class="choice">선택자</h1>
+
+let pList = document.querySelector("p"); // ; HTMLParagraphElement 
+console.log(pList); //<p style="background-color: blue;">content1</p>
 
 let pList2 = document.querySelectorAll("p");
-console.log(pList2);
+console.log(pList2); //NodeList(4) [p, p, p, p]
+
+
+function process() {
+    // alert('click');
+    let fname = document.frm.fname;
+    console.log(fname, typeof fname);
+    console.log(fname.value);
+    console.log(fname.defaultValue);
+    return false;
+
+}
