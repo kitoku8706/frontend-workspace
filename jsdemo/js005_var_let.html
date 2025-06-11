@@ -17,10 +17,21 @@
 
         for (var i = 1; i <= 3; i++) {
             console.log(`i=${i}`);
-            console.log("====================================");
-            for (let j = 1; j <= 3; j++) {
-                console.log(`j = ${j}`);
-            }    
+        }
+
+        //4 : 선언되어 있는 영역 전체에서 for가 적용가능하기 때문
+        console.log(`i=${i}`);
+        console.log("================================");
+
+        for (let j = 1; j <= 3; j++) {
+            console.log(`j=${j}`);
+        }
+
+        //Uncaught ReferenceError: j is not defined
+        //지정된 범위안에서만 적용가능 -> let 사용 권장
+        console.log(`j=${j}`);
+
+
     </script>
 </body>
 
