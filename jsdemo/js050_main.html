@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js050_main.html</title>
+    <style>
+        div#popup {
+            width: 301px;
+            height: 351px;
+            border: 1px solid black;
+            position: fixed;
+            left: 30%;
+            top: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <p>식물학은 아주 오랜 옛날에 사람들이 먹을 수 있는 약초를 분류하는 본초학에서 유래하였으며, 고대의 식물학은 아리스토텔레스의 제자였던 테오프라스토스가 저술한 식물 분류에 관련된 저서들에 기반한다.
+            이후 대
+            플리니우스가
+            다시 정비하였지만, 식물에 대한 고찰이 없는 단순히 나열에 불과했고, 중세에까지 식물학은 다시 본초학으로 회귀하게 된다. 이렇게 다져진 기본에 새로운 정보들을 추가하는 수준이었으나, 레온하르트
+            푹스가
+            약용 식물이나
+            독초가 아닌 일반 식물을 다루기 시작했고[1] 새로운 식민지들이 개척되는 과정에서 새로운 식물들이 대거 발견되면서 새로운 국면을 맞이하게 된다. 특히 향신료 때문에 새로운 식물의 정보를 요구하는
+            큰
+            손들이 늘어났으며
+            지식의 범위가 넓어지면서 생물들을 더욱 체계적으로 분류하고 연구할 필요가 제기되었으며, 쌍떡잎식물과 외떡잎식물을 나누는 결정적인 분류법을 체계화한 것은 식물학의 대가이자 17세기의 생물학자 존
+            레이에서
+            시작해.
+            현대적인 식물분류학의 시작은 18세기의 카를 폰 린네라고 본다.</p>
+    </div>
+    <div id="popup">
+        <img src="images/popup.jpg" usemap="#pop" />
+
+
+
+
+        <map name="pop" id="pop">
+            <!--coors='x start, y start, x end, y end'-->
+            <area shape="rect" coords="255,332,290,345" href="#" alt="창닫기" />
+            <!--coords popup이미지 안에서 지정한 좌표값의 범위(창닫기)-->
+        </map>
+    </div>
+    <script>
+
+
+        let close = document.querySelector('map#pop area');
+        close.onclick = (e) => {
+            let popup = document.querySelector('div#popup')
+            popup.style.display = "none";
+            e.preventDefault(); //retrun false와 동일하다.
+        };
+    </script>
+
+    </div>
+
+</body>
+
+</html>
