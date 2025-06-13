@@ -21,10 +21,38 @@
         <div class="Atop indexpage">
             <ul class="indexpage">
                 <li>
-                    <a href="#">탑</a>
-                    <a href="#">아우터</a>
-                    <a href="#">팬츠</a>
-                    <a href="#">악세서리</a>
+                    <a href="#">탑
+                        <ol>
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ol>
+                    </a>
+                    <a href="#">아우터
+                        <ol>
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">머플러</a></li>
+                        </ol>
+                    </a>
+                    <a href="#">팬츠
+                        <ol>
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">긴바지</a></li>
+                            <li><a href="#">레깅스</a></li>
+                        </ol>
+                    </a>
+                    <a href="#">악세서리
+                        <ol>
+                            <li><a href="#">귀고리</a></li>
+                            <li><a href="#">목걸이</a></li>
+                            <li><a href="#">반지</a></li>
+                            <li><a href="#">팔찌</a></li>
+                        </ol>
+                    </a>
 
 
                 </li>
@@ -32,17 +60,108 @@
         </div>
     </header>
     <!-- B  -->
+    <section class="bmid imsl">
+        <ul class="slide">
+            <li>
+                <a href="#">
+                    <img src="./Contents/slide_01.png" alt="슬라이드1">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./Contents/slide_02.png" alt="슬라이드2">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./Contents/slide_03.png" alt="슬라이드3">
+                </a>
+            </li>
+        </ul>
+    </section>
     <!-- C  -->
+    <main class="cmain all">
+        <div class="tapbox">
+            <ol class="tapm">
+                <li class="on" onclick="chgTab(0,1)">
+                    <a href="#">공지사항</a>
+                </li>
+                <li onclick="chgTab(1,0)">
+                    <a href="#">갤러리</a>
+                </li>
+            </ol>
+            <ol class="tapc">
+                <li class="on">
+                    <ul class="gongji">
+                        <li>
+                            <a href="#" onclick="popup('block')">
+                                [발표]『장사의 신동 X 설화수』 이벤트 당첨자
+                            </a>
+                            <span>2021. 06. 07</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                [주의] 국표원, 유모차, LED등기구, 가정용 서랍장 등 66개 제품 리콜 안내
+                            </a>
+                            <span>22021. 06. 01</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                [발표]『빅스마일데이 조지아 크래프트 경품』 이벤트 당첨자
+                            </a>
+                            <span>2021. 05. 31</span>
+
+                        </li>
+                        <li>
+                            <a href="#">
+                                [발표]『빅스마일데이 코카콜라 경품』 이벤트 당첨자
+                            </a>
+                            <span>2021. 05. 31</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="gal">
+                        <li>
+                            <a href="#">
+                                <img src="./Contents/gal1.png" alt="갤러리이미지1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./Contents/gal2.png" alt="갤러리이미지2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./Contents/gal3.png" alt="갤러리이미지3">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div class="tapbox">
+            <a href="#">
+                <img src="./Contents/C.배너바로가기이미지/배너이미지.png" alt="배너">
+            </a>
+        </div>
+        <div class="tapbox">
+            <a href="#">
+                <img src="./Contents/C.배너바로가기이미지/바로가기.png" alt="바로가기">
+            </a>
+        </div>
+    </main>
     <!-- D     -->
 </body>
 
 </html>
 
 
-<!-- <ul>비정렬 목록 태그,
-     <ol>,
-    <li>,
-    <dl>,
-    <dt>,
-    <dd>,
-    <dfn> -->
+<!-- <ul> 비정렬 목록 태그,
+     <ol> 정렬 목록 태그,
+    <li> 목록의 항목 태그,
+    <dl> 정의 목록 태그,
+    <dt> 용어 태그,
+    <dd> 용어 정의 태그,
+    <dfn> 정의 태그 -->
